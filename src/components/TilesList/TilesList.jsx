@@ -25,6 +25,11 @@ const TilesList = props => {
 };
 
 TilesList.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired
+  })).isRequired,
   increaseRating: PropTypes.func.isRequired,
   decreaseRating: PropTypes.func.isRequired,
 };
